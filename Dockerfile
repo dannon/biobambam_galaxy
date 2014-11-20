@@ -3,12 +3,13 @@ FROM ubuntu:14.04
 MAINTAINER Dannon Baker <dannon.baker@gmail.com>
 
 # Too fresh, these had issues!
-#ADD https://github.com/gt1/biobambam/archive/0.0.180-release-20141115112609.tar.gz biobambam.tar.gz
-#ADD https://github.com/gt1/libmaus/archive/0.0.179-release-20141119194238.tar.gz libmaus.tar.gz
+# ADD https://github.com/gt1/biobambam/archive/0.0.180-release-20141115112609.tar.gz biobambam.tar.gz
+# ADD https://github.com/gt1/libmaus/archive/0.0.179-release-20141119194238.tar.gz libmaus.tar.gz
 
 ADD https://github.com/gt1/biobambam/archive/0.0.174-release-20141024073944.tar.gz biobambam.tar.gz
 ADD https://github.com/gt1/libmaus/archive/0.0.174-release-20141112090726.tar.gz libmaus.tar.gz
 
+#TODO: Trim this down.
 RUN apt-get update && apt-get install -y build-essential \
     g++ \
     git \
